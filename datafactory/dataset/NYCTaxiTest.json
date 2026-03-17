@@ -9,7 +9,8 @@
 		"type": "Parquet",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
+				"type": "HttpServerLocation",
+				"relativeUrl": "biws-g3hs.json"
 			},
 			"compressionCodec": "snappy"
 		},
