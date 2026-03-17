@@ -1,0 +1,19 @@
+{
+	"name": "JSONOscarTest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLSTolanding",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "OscarTest",
+				"fileSystem": "testdata"
+			}
+		},
+		"schema": {}
+	}
+}
