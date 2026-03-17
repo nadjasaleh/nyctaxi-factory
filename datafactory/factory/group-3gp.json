@@ -1,0 +1,9 @@
+{
+	"name": "group-3gp",
+	"location": "swedencentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5bb3c26a-732a-4db3-8599-e2ed9927ac99",
+		"tenantId": "e9885073-5c41-4cad-84b0-174903b19bec"
+	}
+}
