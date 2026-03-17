@@ -1,0 +1,22 @@
+{
+	"name": "RestService1",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://data.cityofnewyork.us/api/v3/views/",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous",
+			"authHeaders": {
+				"X-Auth-Token": {
+					"type": "AzureKeyVaultSecret",
+					"store": {
+						"referenceName": "AzureKeyVault1",
+						"type": "LinkedServiceReference"
+					},
+					"secretName": "NYCAppToken"
+				}
+			}
+		}
+	}
+}
