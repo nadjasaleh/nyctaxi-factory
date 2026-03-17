@@ -8,13 +8,13 @@
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous",
 			"authHeaders": {
-				"NycKey": {
+				"NYCTaxiProjectgroup3": {
 					"type": "AzureKeyVaultSecret",
 					"store": {
 						"referenceName": "group3Secrets",
 						"type": "LinkedServiceReference"
 					},
-					"secretName": "NYCKey"
+					"secretName": "NYCAppToken"
 				}
 			}
 		}
