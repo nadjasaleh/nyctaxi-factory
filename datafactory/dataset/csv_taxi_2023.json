@@ -1,0 +1,21 @@
+{
+	"name": "csv_taxi_2023",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "http_yellowtaxi_2023",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
