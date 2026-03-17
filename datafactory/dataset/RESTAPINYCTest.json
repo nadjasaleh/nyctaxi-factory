@@ -8,7 +8,7 @@
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
-			"relativeUrl": "biws-g3hs.json?$limit=20000"
+			"relativeUrl": "biws-g3hs.json?$limit=113496874"
 		},
 		"schema": []
 	}
