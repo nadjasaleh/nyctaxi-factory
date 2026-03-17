@@ -1,0 +1,18 @@
+{
+	"name": "taxi",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Http_taxi23",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "pageNumber=1&pageSize=10&app_token=5pysMcrqLadAoWayiclad72xT"
+			}
+		},
+		"schema": {}
+	}
+}
