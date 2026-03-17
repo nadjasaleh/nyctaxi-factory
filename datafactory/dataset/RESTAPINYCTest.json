@@ -1,0 +1,15 @@
+{
+	"name": "RESTAPINYCTest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestTest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "biws-g3hs.json?$limit=113496874"
+		},
+		"schema": []
+	}
+}

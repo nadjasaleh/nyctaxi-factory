@@ -1,0 +1,22 @@
+{
+	"name": "RestTest",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://data.cityofnewyork.us/resource/",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous",
+			"authHeaders": {
+				"X-App-Token": {
+					"type": "AzureKeyVaultSecret",
+					"store": {
+						"referenceName": "group3Secrets",
+						"type": "LinkedServiceReference"
+					},
+					"secretName": "NYCAppToken"
+				}
+			}
+		}
+	}
+}
