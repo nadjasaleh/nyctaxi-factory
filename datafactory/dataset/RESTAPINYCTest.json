@@ -1,0 +1,12 @@
+{
+	"name": "RESTAPINYCTest",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestTest",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"schema": []
+	}
+}
