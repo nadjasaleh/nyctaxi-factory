@@ -1,0 +1,18 @@
+{
+	"name": "Yellow_Taxi_Trip_Records",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HTTP_tripdata01",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
