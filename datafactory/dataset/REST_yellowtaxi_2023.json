@@ -8,7 +8,7 @@
 		"annotations": [],
 		"type": "RestResource",
 		"typeProperties": {
-			"relativeUrl": "4b4i-vvec.json?https://soda.demo.socrata.com/resource/4tka-6guv.json?$limit=38310226"
+			"relativeUrl": "4b4i-vvec.json?$limit=38310226"
 		},
 		"schema": []
 	}
