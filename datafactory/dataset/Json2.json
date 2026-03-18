@@ -10,9 +10,9 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "testing",
-				"folderPath": "nadstest",
-				"fileSystem": "testdata"
+				"fileName": "yellow_2023",
+				"folderPath": "raw_data",
+				"fileSystem": "landing"
 			}
 		},
 		"schema": {}
