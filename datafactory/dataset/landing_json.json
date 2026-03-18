@@ -1,0 +1,20 @@
+{
+	"name": "landing_json",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLSTolanding",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "test_api.json",
+				"folderPath": "weather",
+				"fileSystem": "testdata"
+			}
+		},
+		"schema": {}
+	}
+}
