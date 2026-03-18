@@ -1,0 +1,15 @@
+{
+	"name": "REST_Green_taxi_2023",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestService1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "peyi-gg4n.json?$limit=787060"
+		},
+		"schema": []
+	}
+}
