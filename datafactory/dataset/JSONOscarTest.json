@@ -5,13 +5,22 @@
 			"referenceName": "ADLSTolanding",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "OscarTest",
-				"fileSystem": "testdata"
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"folderPath": "LoopedNYCData",
+				"fileSystem": "landing"
 			}
 		},
 		"schema": {}
