@@ -90,7 +90,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"RelativeURL": {
-											"value": "@concat(item().Prop_1,'?$limit=',replace(item().Prop_2, ',', ''))",
+											"value": "@concat(item().Prop_1,'?$limit=500000000')",
 											"type": "Expression"
 										}
 									}
