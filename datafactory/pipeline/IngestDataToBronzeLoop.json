@@ -13,7 +13,25 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"dataset": {
+						"referenceName": "TaxiDataCSV",
+						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
 			},
 			{
 				"name": "CopyDatasetsToLanding",
@@ -26,7 +44,73 @@
 						]
 					}
 				],
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('GetDatasetNames').output.value",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "CopyFromAPITolandingLoopedNYCDataJSON",
+							"type": "Copy",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"source": {
+									"type": "RestSource",
+									"httpRequestTimeout": "00:01:40",
+									"requestInterval": "00.00:00:00.010",
+									"requestMethod": "GET",
+									"paginationRules": {
+										"supportRFC5988": "true"
+									}
+								},
+								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings"
+									}
+								},
+								"enableStaging": false
+							},
+							"inputs": [
+								{
+									"referenceName": "RESTAPINYCTest",
+									"type": "DatasetReference",
+									"parameters": {
+										"RelativeURL": {
+											"value": "@concat(item().Prop_1,'?$limit=',replace(item().Prop_2, ',', ''))",
+											"type": "Expression"
+										}
+									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "JSONOscarTest",
+									"type": "DatasetReference",
+									"parameters": {
+										"FileName": {
+											"value": "@item().Prop_0",
+											"type": "Expression"
+										}
+									}
+								}
+							]
+						}
+					]
+				}
 			}
 		],
 		"annotations": []
