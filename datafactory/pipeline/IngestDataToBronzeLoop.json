@@ -42,12 +42,18 @@
 						"dependencyConditions": [
 							"Succeeded"
 						]
+					},
+					{
+						"activity": "GetDatasetNames",
+						"dependencyConditions": [
+							"Succeeded"
+						]
 					}
 				],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('GetDatasetNames').output.value",
+						"value": "@activity('GetMissingDatasetNames').output.value",
 						"type": "Expression"
 					},
 					"batchCount": 50,
@@ -138,7 +144,7 @@
 						}
 					},
 					"dataset": {
-						"referenceName": "TaxiDataCSV",
+						"referenceName": "MissingTaxiDataCSV",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
